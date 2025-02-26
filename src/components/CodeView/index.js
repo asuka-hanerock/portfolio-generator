@@ -7,7 +7,6 @@ const CodeView = ({ html }) => {
     navigator.clipboard.writeText(html);
     setCopySuccess(true);
 
-    // 3秒後にメッセージを消す
     setTimeout(() => {
       setCopySuccess(false);
     }, 3000);

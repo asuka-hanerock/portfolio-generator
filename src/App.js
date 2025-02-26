@@ -22,7 +22,6 @@ function App() {
     certifications: [{ name: "", issuer: "", year: "" }],
     projects: [{ title: "", description: "", technologies: "", link: "" }],
     theme: {
-      // テーマ設定を追加
       headerBg: "#2c3e50",
       headerText: "#ffffff",
       mainBg: "#f4f4f4",

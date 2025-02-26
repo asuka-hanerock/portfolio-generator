@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# ポートフォリオジェネレーター
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HTMLポートフォリオジェネレーターは、エンジニアやクリエイターのための個人ポートフォリオサイトを簡単に作成できるReactアプリケーションです。フォームに必要情報を入力するだけで、プロフェッショナルなポートフォリオのHTMLコードが生成されます。
 
-## Available Scripts
+![ポートフォリオジェネレーター画面イメージ](screenshot.png)
 
-In the project directory, you can run:
+## 特徴
 
-### `npm start`
+- **個人情報の入力**: 名前、肩書き、自己紹介、ロゴ画像など基本情報を簡単に設定
+- **連絡先情報**: メール、GitHub、LinkedIn、Qiita、LINEなどのSNSリンクをカスタマイズ
+- **スキルセット**: 一般的な技術スキルから選択または独自のスキルを追加
+- **資格・認定**: 取得した資格や認定情報を追加
+- **プロジェクト一覧**: 手がけたプロジェクトの詳細情報を登録
+- **テーマカスタマイズ**: ヘッダー、背景、アクセントカラーなどをカスタマイズ
+- **HTMLコード生成**: 入力情報に基づいたポートフォリオサイトのHTMLコードを自動生成
+- **プレビュー機能**: 作成したポートフォリオをブラウザ内でプレビュー
+- **HTMLのダウンロード**: 生成したコードをファイルとしてダウンロード
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## インストール方法
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+このプロジェクトは[Create React App](https://github.com/facebook/create-react-app)で作成されています。
 
-### `npm test`
+```bash
+# リポジトリをクローン
+git clone https://github.com/asuka-hanerock/portfolio-generator.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# プロジェクトディレクトリに移動
+cd portfolio-generator
 
-### `npm run build`
+# 依存関係のインストール
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 開発サーバーの起動
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+これでブラウザで `http://localhost:3000` にアクセスするとアプリケーションが起動します。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 使用方法
 
-### `npm run eject`
+1. **基本情報を入力**
+   - 名前、職種、自己紹介文を入力します
+   - ロゴ画像をアップロードすると、ポートフォリオのヘッダーおよびファビコンとして使用されます
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **連絡先情報を追加**
+   - メールアドレスや各種SNSのURLを入力します
+   - 入力されたものだけがポートフォリオに表示されます
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **スキルを選択**
+   - リストから該当するスキルを選択します
+   - 「カスタムスキルを追加」欄で独自のスキルを追加できます
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **資格・認定を追加**
+   - 「資格を追加」ボタンで複数の資格情報を登録できます
+   - 資格名、発行機関、取得年を入力します
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **プロジェクト情報を入力**
+   - 「プロジェクトを追加」ボタンで複数のプロジェクトを登録できます
+   - プロジェクトごとにタイトル、説明、使用技術、リンクを設定できます
 
-## Learn More
+6. **テーマをカスタマイズ（任意）**
+   - 「テーマをカスタマイズ」ボタンをクリックして色を変更できます
+   - ヘッダー背景色、ヘッダーテキスト色、メイン背景色、メインテキスト色、アクセントカラーを調整できます
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. **HTMLを生成**
+   - 「HTMLを生成」ボタンをクリックしてポートフォリオのHTMLコードを生成します
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+8. **結果の確認とダウンロード**
+   - 「HTMLコード」タブでコードを確認し、「HTMLをコピー」または「HTMLをダウンロード」ボタンでコードを取得できます
+   - 「プレビュー」タブで実際の表示を確認できます
 
-### Code Splitting
+## ポートフォリオの公開方法
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+生成されたHTMLファイルは、次のような方法で公開できます：
 
-### Analyzing the Bundle Size
+1. **静的ホスティングサービスの利用**
+   - [GitHub Pages](https://pages.github.com/)
+   - [Netlify](https://www.netlify.com/)
+   - [Vercel](https://vercel.com/)
+   - [Firebase Hosting](https://firebase.google.com/docs/hosting)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **独自ドメインでのホスティング**
+   - 生成したHTMLファイルをレンタルサーバーにアップロード
 
-### Making a Progressive Web App
+3. **ローカルでの確認**
+   - ダウンロードしたHTMLファイルをブラウザで直接開いて確認
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## プロジェクト構成
 
-### Advanced Configuration
+```
+src/
+├── components/       # コンポーネント
+│   ├── PortfolioForm/ # 入力フォーム関連
+│   │   ├── BasicInfo.js
+│   │   ├── ContactInfo.js
+│   │   ├── SkillsSection.js
+│   │   ├── CertificationsSection.js
+│   │   ├── ProjectsSection.js
+│   │   └── index.js
+│   ├── Preview/       # プレビュー関連
+│   │   └── index.js
+│   ├── CodeView/      # HTML表示用
+│   │   └── index.js
+│   ├── ThemeCustomizer/ # テーマカスタマイズ
+│   │   └── index.js
+│   └── HelpSection/   # 使い方説明
+│       └── index.js
+├── utils/             # ユーティリティ関数
+│   └── htmlGenerator.js
+├── App.js             # メインコンポーネント
+└── index.js           # エントリーポイント
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## カスタマイズ
 
-### Deployment
+生成されるHTMLテンプレートを変更したい場合は、`utils/htmlGenerator.js`ファイルを編集してください。このファイルには、ポートフォリオのHTMLテンプレートとスタイルが含まれています。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 技術スタック
 
-### `npm run build` fails to minify
+- [React](https://reactjs.org/) - UIライブラリ
+- [Create React App](https://create-react-app.dev/) - Reactプロジェクトのセットアップ
+- HTML/CSS - マークアップとスタイリング
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 今後の開発予定
+
+- モバイルアプリ版の提供
+- 追加のポートフォリオテンプレート
+- CSSフレームワーク選択オプション
+- 多言語対応
+
+## ライセンス
+
+このプロジェクトはMITライセンスの下で公開されています。詳細は[LICENSE](LICENSE)ファイルを参照してください。
+
+## 貢献
+
+プロジェクトへの貢献を歓迎します。改善案や問題報告はIssuesで、コード貢献はPull Requestsでお願いします。
+
+## 作者
+
+Asuka Iwahane - https://github.com/asuka-hanerock/portfolio-generator
+
+---
+
+Happy coding! 🚀

@@ -1,22 +1,16 @@
-// HTMLを整形するフォーマット関数
 const formatHTML = (html) => {
   let formatted = "";
   let indent = 0;
 
-  // インデントの文字列を生成
   const getIndent = (count) => "    ".repeat(count);
 
-  // HTMLを1行ずつ処理
   html.split(/>\s*</).forEach((line) => {
-    // 閉じタグの場合はインデントを減らす
     if (line.match(/^\/\w/)) {
       indent -= 1;
     }
 
-    // 行をフォーマットして追加
     formatted += getIndent(indent) + "<" + line + ">\n";
 
-    // 自己完結タグでない開きタグの場合はインデントを増やす
     if (line.match(/^[^\/]/) && !line.match(/\/$/)) {
       indent += 1;
     }
@@ -26,7 +20,6 @@ const formatHTML = (html) => {
 };
 
 const generateHTML = (data) => {
-  // ロゴ画像があれば、ファビコンとしても設定
   let faviconHtml = "";
   if (data.logoImage) {
     faviconHtml = `
@@ -34,7 +27,6 @@ const generateHTML = (data) => {
     <link rel="shortcut icon" href="${data.logoImage}" type="image/x-icon">`;
   }
 
-  // テーマカラーを取得
   const { headerBg, headerText, mainBg, mainText, accentColor } =
     data.theme || {
       headerBg: "#2c3e50",
@@ -44,7 +36,6 @@ const generateHTML = (data) => {
       accentColor: "#3498db",
     };
 
-  // HTMLテンプレートを生成
   const htmlTemplate = `<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -386,7 +377,6 @@ const generateHTML = (data) => {
 </body>
 </html>`;
 
-  // HTMLをフォーマットして返す
   return formatHTML(htmlTemplate);
 };
 
